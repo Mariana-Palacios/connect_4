@@ -1,0 +1,28 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    background-color: $dark-purple;
+    .mainMenu{
+        //width: 500px;
+        height: 500px;
+        @include border(15px,$purple,15px,15px, 450px);
+        background-color: $purple;
+        &__btn{
+            &-red{
+                @include border(15px,$red,15px,15px, 80%);
+                cursor: pointer;
+            }
+            &-yellow{
+                @include border(15px,$yellow,15px,15px, 80%);
+                cursor: pointer;
+            }
+            &-white{
+                @include border(15px,$white,15px,15px, 80%);
+                cursor: pointer;
+            }
+        }
+        &__btn-red:hover,&__btn-yellow:hover,&__btn-white:hover{
+            box-shadow: 0px 10px $dark-purple;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+.mainGame{
+    width: 100vw;
+    height: 100vh;
+    background-color: $purple;
+    .player{
+        @include border(30px,$white,15px 0px 0px 0px,15px,147px);
+        height:160px;
+        text-align: center;
+        &__img{
+            margin-top: -100px;
+        }
+    }
+    .gameBoard{
+        @include border(30px,$white,15px 0px 0px 0px,15px,660px);
+        height:600px;
+        &__btn{
+            @include btn_clean;
+        }
+        &__circle{
+            @include gameBoardCircleBorder(50%,$purple,0px,10px,70px);
+        }
+        &__circle:hover{
+            background-color: $yellow;
+        }
+    }
+}

@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'SpaceGrotesk';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/SpaceGrotesk-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SpaceGrotesk';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/SpaceGrotesk-Bold.ttf') format('truetype');
+}
+
+
+*{
+    font-family: 'SpaceGrotesk';
+    font-size: 24px;
+}
+
+a,
+a:visited,
+a:active{
+    text-decoration: none;
+}
+
