@@ -1,7 +1,15 @@
 .mainGame{
-    width: 100vw;
-    height: 100vh;
-    background-color: $purple;
+    background-color: transparent;
+    .darkPurpleBackground{
+        border: solid 1px transparent;
+        border-radius: 90px 90px 0px 0px;
+        background-color: $dark-purple;
+        width: 100%;
+        height: 30vh;
+        position: absolute;
+        bottom: 0;
+        z-index: -10;
+    }
     .player{
         @include border(30px,$white,15px 0px 0px 0px,15px,147px);
         height:160px;
@@ -11,10 +19,21 @@
         }
     }
     .gameBoard{
-        @include border(30px,$white,15px 0px 0px 0px,15px,660px);
+        @include border(30px,$white,15px 0px 50px 0px,15px,660px);
         height:600px;
         &__btn{
             @include btn_clean;
+            .btnPointer{
+                opacity: 0;
+                position: absolute;
+                top: 140px;
+                margin-left: -20px;
+            }
+        }
+        &__btn:hover{
+            .btnPointer{
+                opacity: 1;
+            }
         }
         &__circle{
             @include gameBoardCircleBorder(50%,$purple,0px,10px,70px);
@@ -22,5 +41,25 @@
         &__circle:hover{
             background-color: $yellow;
         }
+        .playBtn{
+            @include border(15px,$white,15px,15px, 315px);
+            position: absolute;
+            top: 800px;  /* position the top  edge of the element at the middle of the parent */
+            left: 50%; /* position the left edge of the element at the middle of the parent */
+            transform: translate(-50%, -50%);
+            z-index: 1000;
+        }
+    }
+    .asideMenu{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.315);
+    }
+    .hide{
+        //opacity: 0;
+        display: none;
     }
 }

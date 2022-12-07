@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+.background{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    z-index: -100;
+    &-purple{
+        background-color: $purple;
+    }
+    &-dark-purple{
+        background-color: $dark-purple;
+    }
+}
+.image,p,h2{
+    background-color: transparent;
+}
+
 .flex{
     display: flex;
     &-j-c{
@@ -17,6 +33,9 @@
     }
     &-a-i{
         align-items: center;
+    }
+    &-a-i-f-s{
+        align-items: flex-start;
     }
     &-f-d-c{
         flex-direction: column;
