@@ -12,10 +12,32 @@
     src: url('../fonts/SpaceGrotesk-Bold.ttf') format('truetype');
 }
 
+//FONT SIZES
+$large: 56px;
+$medium: 24px;
+$small: 20px;
+$x-small: 16px;
+
 
 *{
     font-family: 'SpaceGrotesk';
-    font-size: 24px;
+}
+
+.smallP{
+    font-size: $x-small;   
+}
+
+p{
+    font-size: $small;
+    font-weight: bold;
+}
+
+button{
+    font-size: $medium;
+}
+
+h2{
+    font-size: $large;
 }
 
 a,

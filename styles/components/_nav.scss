@@ -1,3 +1,10 @@
 .nav{
     padding: 60px 0px 40px 0px;
+    .smallBtn{
+        @include smallBtn($dark-purple);
+        margin: 0px 200px;
+    }
+    .smallBtn:hover{
+        background-color: $red;
+    }
 }

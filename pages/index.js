@@ -14,6 +14,7 @@ export default function Home() {
         <button className='flex flex-a-i flex-j-s-b mainMenu__btn-yellow'>PLAY VS PLAYER <Image src={Player_vs_Player} className='image'/></button>
         <button className='flex flex-a-i flex-j-s-b mainMenu__btn-white'>GAME RULES <Image src={Player_vs_Cpu} className='image'/></button>
       </main>
+      <aside className='backgroundBLackTransition'></aside>
     </div>
   )
 }

@@ -41,13 +41,34 @@
         &__circle:hover{
             background-color: $yellow;
         }
-        .playBtn{
-            @include border(15px,$white,15px,15px, 315px);
+        .playBtn,.playerTurn{
             position: absolute;
             top: 800px;  /* position the top  edge of the element at the middle of the parent */
             left: 50%; /* position the left edge of the element at the middle of the parent */
             transform: translate(-50%, -50%);
             z-index: 1000;
+        }
+        .playBtn{            
+            @include border(15px,$white,15px,15px, 270px);
+            &__smallBtn{
+                @include smallBtn($purple);
+
+            }
+            &__smallBtn:hover{
+                background-color: $red;
+            }
+        }
+        .playerTurn{
+            &-1{
+                color: $white;
+            }
+            &-2{
+                color: $black;
+            }
+            &__img{
+                position: absolute;
+                z-index: -100;
+            }
         }
     }
     .asideMenu{
