@@ -21,6 +21,10 @@
     background-color: transparent;
 }
 
+.link{
+    width: 80%;
+}
+
 .flex{
     display: flex;
     &-j-c{
@@ -28,6 +32,9 @@
     }
     &-j-s-b{
         justify-content: space-between;
+    }
+    &-j-s-a{
+        justify-content: space-around;
     }
     &-j-f-s{
         justify-content: flex-start;

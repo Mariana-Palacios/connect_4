@@ -6,11 +6,11 @@
         background-color: $purple;
         &__btn{
             &-red{
-                @include border(15px,$red,15px,15px, 80%);
+                @include border(15px,$red,15px,15px 0px, 100%);
                 cursor: pointer;
             }
             &-yellow{
-                @include border(15px,$yellow,15px,15px, 80%);
+                @include border(15px,$yellow,15px,15px 0px, 100%);
                 cursor: pointer;
             }
             &-white{
