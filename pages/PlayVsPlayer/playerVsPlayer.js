@@ -11,6 +11,7 @@ import TurnBackgroundRed from '../../public/turn-background-red.svg'
 import TurnBackgroundYellow from '../../public/turn-background-yellow.svg'
 import CounterRedLarge from '../../public/counter-red-large.svg'
 import CounterYellowLarge from '../../public/counter-yellow-large.svg'
+import winDetector from '../GameLogic'
 
 export default function PlayVsPlayer() {
   // start play 
@@ -31,7 +32,7 @@ export default function PlayVsPlayer() {
     {id:'5',array:[0,0,0,0,0,0]},
     {id:'6',array:[0,0,0,0,0,0]},
   ]);
-  console.log(gameBoardStatus)
+  //console.log(gameBoardStatus)
   //restart
   const restart = () =>{
     setStartPlay(false)
@@ -62,13 +63,14 @@ export default function PlayVsPlayer() {
     let copyOfgameBoardStatus = gameBoardStatus
     for (let i = 6 - 1; i >= 0; i--) {
       if(copyOfgameBoardStatus[columnPosition]['array'][i]==0){
-        copyOfgameBoardStatus[columnPosition]['array'][i]=1
+        copyOfgameBoardStatus[columnPosition]['array'][i]=marker[2]
         break
       }
     } 
     setgameBoardStatus(copyOfgameBoardStatus)
     changeStatus()
-    console.log(gameBoardStatus);
+    winDetector(gameBoardStatus)
+    //console.log(gameBoardStatus);
   } 
 
   return (
@@ -85,7 +87,7 @@ export default function PlayVsPlayer() {
           <h2>0</h2>
         </section>
         <div className='flex diskManager'>
-          {columnNumber.map((object, i) => <div className={`diskManager__div`}>{gameBoardStatus[0]['array'].map((object, j) =><Image alt='disk' className={`disk disk-${j} ${gameBoardStatus[i]['array'][j]==0?'hide':''}`} src={gameBoardStatus[i]['array'][j]==0?'':marker[3]} key={j}/>)}</div>)}
+          {columnNumber.map((object, i) => <div className={`diskManager__div`}>{gameBoardStatus[0]['array'].map((object, j) =><Image alt='disk' className={`disk disk-${j} ${gameBoardStatus[i]['array'][j]==0?'hide':''}`} src={gameBoardStatus[i]['array'][j]==0?'':(gameBoardStatus[i]['array'][j]==1?CounterRedLarge:CounterYellowLarge)} key={j}/>)}</div>)}
         </div>
         <main className='flex flex-j-c gameBoard'>
           {gameBoardStatus.map((column, i) =>

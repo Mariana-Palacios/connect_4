@@ -185,9 +185,6 @@ a:active {
   width: 70px;
   height: 70px;
 }
-.mainGame .gameBoard__circle:hover {
-  background-color: #FFCE67;
-}
 .mainGame .gameBoard .playBtn, .mainGame .gameBoard .playerTurn {
   position: absolute;
   top: 800px; /* position the top  edge of the element at the middle of the parent */

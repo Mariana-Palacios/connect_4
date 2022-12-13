@@ -38,9 +38,6 @@
         &__circle{
             @include gameBoardCircleBorder(50%,$purple,0px,10px,70px);
         }
-        &__circle:hover{
-            background-color: $yellow;
-        }
         .playBtn,.playerTurn{
             position: absolute;
             top: 800px;  /* position the top  edge of the element at the middle of the parent */
